@@ -10,8 +10,7 @@ This example shows two charts:
 
 # **Requirements**
 
-Program works on MySQL with two tables containing web metrics.  DB schema and host info are defined in the variables defined in profile.
-
+Program works on MySQL with two tables containing web metrics.  DB schema and host info are defined in the variables defined in profile.  
 Tables and metrics could be adjusted to your preference.  Here are the files to adjust
 
 /lib/get_chart_shares.rb

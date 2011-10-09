@@ -3,7 +3,8 @@ require 'dbi'
 
 def get_daily_traffic(region, dimension)
   begin
-    dbh = DBI.connect("DBI:Mysql:"+$db_schema+":localhost", $mysql_id, $mysql_id)
+    puts "xxxxxx $db_schema"
+    dbh = DBI.connect("DBI:Mysql:" + $db_schema + ":" + $db_host, $mysql_id, $mysql_pw)
     sql = "select date_format(date,'%Y-%m-%d') AS date, dimension, sum(visits) visits 
     from " + $db_schema + ".wt_daily_source 
     where dimension = '" + dimension + "' 
@@ -27,7 +28,7 @@ end
 
 def get_outcome_share(region)
   begin
-    dbh = DBI.connect("DBI:Mysql:"+$db_schema+":localhost", $mysql_id, $mysql_id)
+    dbh = DBI.connect("DBI:Mysql:" + $db_schema + ":" + $db_host, $mysql_id, $mysql_pw)
     sql = "select dimension, sum(visits) visits, sum(pdp_visits) pdp_visits, sum(orders) orders, sum(revenue) revenue 
     from " + $db_schema + ".wt_daily_source 
     where region = '" + region + "'
@@ -50,7 +51,7 @@ end
 
 def get_dates(region)
   begin
-    dbh = DBI.connect("DBI:Mysql:"+$db_schema+":localhost", $mysql_id, $mysql_id)
+    dbh = DBI.connect("DBI:Mysql:" + $db_schema + ":" + $db_host, $mysql_id, $mysql_pw)
     sql = "
     select date_format(date,'%Y-%m-%d') as date 
     from " + $db_schema + ".wt_daily_source

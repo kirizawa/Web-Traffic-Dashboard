@@ -6,7 +6,6 @@ require './lib/get_chart_sources'
 require './lib/get_chart_share'
 require 'sinatra'
 require 'haml'
-require 'dbi'
 
 # set :public, Proc.new { File.join(root, "js") }
 set :views, File.join(File.dirname(__FILE__), 'views')
