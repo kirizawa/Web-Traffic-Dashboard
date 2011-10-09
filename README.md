@@ -1,11 +1,12 @@
-** Web Traffic Dashboard **
+**Web Traffic Dashboard**
 
 Sample web based dashboard showing common web metrics.  
 This example shows two charts:
 1) Line chart broken down by different traffic sources
 2) Stack bar graph showing shares of traffic, product page traffic, orders, and revenue for various traffic sources
 
-** Requirements **
+**Requirements**
+
 Program works on MySQL with two tables containing web metrics.  DB schema and host info are defined in the variables defined in profile.
 
 Tables and metrics could be adjusted to your preference.  Here are the files to adjust
@@ -15,7 +16,8 @@ Tables and metrics could be adjusted to your preference.  Here are the files to 
 
 I've defined the MySQL DB schema, user id, and password in profile.rb in profile, but you could change that accordingly.  Those values are obviously used to make connections to MySQL database.
 
-** How to use it? **
+**How to use it?**
+
 Start up the application
 'ruby run_dashboard.rb'
 
