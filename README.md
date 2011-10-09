@@ -26,7 +26,7 @@ I've defined the MySQL DB schema, user id, and password in profile.rb in profile
 
 Start up the application
 
-'ruby run_dashboard.rb'
+> ruby run_dashboard.rb
 
 Go to your localhost with appropriate port number.  The first parameter in this example program is the regional value.  So it could look like:  http://localhost:1234/amr
 
